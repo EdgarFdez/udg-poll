@@ -27,6 +27,10 @@ footer{
     opacity: .4;
     backdrop-filter: blur(2px);
 }
+.elevacion{
+    position: relative;
+    bottom: 145px;
+}
 #imagen{
     position: relative;
     filter: blur(1.5px);
