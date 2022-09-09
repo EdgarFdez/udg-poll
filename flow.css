@@ -32,6 +32,9 @@ footer{
     text-align: center;
     bottom: 145px;
 }
+#seleccion{
+    font-weight: 400;
+}
 #imagen{
     position: relative;
     filter: blur(1.5px);
