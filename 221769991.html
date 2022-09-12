@@ -6,9 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="flow.css">
+        <script src="seleccion.js"></script>
+        <script>
+            id+=" 221769991";
+            registro(221769991);
+        </script>
     </head>
     <body>
-        <header >
+        <header>
             <img id="imagen" src="udg-zoom-5-exterior-biblioteca-2.jpg" height="100" width="1840">
             <div class="cuadrado"></div>
             <h1 class="posicion">UDG - Poll</h1>
@@ -17,7 +22,7 @@
             <h1 id="seleccion">Seleccione el dibujo que más le guste:</h1>
             <br>
             <article>
-                <img class="image" src=".png" height="150" width="150">
+                <img src=".png" height="150" width="150">
                 <hgroup>
                     <h4><input type="radio" name="dibujo" value="1">Titulo del primer dibujo</h4>
                     <h5>Autor del primer dibujo</h5>
@@ -33,7 +38,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, obcaecati.</p>
             </article>
             <br><br>
-            <a href="poll-finished.html"><button>Enviar</button></a>
+            <button onclick="verificacion()">Enviar</button>
         </section>
         <br>
         <footer>Credits</footer>
