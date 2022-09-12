@@ -1,9 +1,3 @@
-localStorage.setItem("Voto Dibujo 1", 0);
-localStorage.setItem("Voto Dibujo 2", 0);
-localStorage.setItem("Bloqueado", "0");
-var titulo_dibujo1=localStorage.getItem("Voto Dibujo 1");
-var titulo_dibujo2=localStorage.getItem("Voto Dibujo 2");
-var id=localStorage.getItem("Bloqueado");
 var check;
 
 function verificacion(){
@@ -16,27 +10,34 @@ function verificacion(){
     if(check==0){
         alert("Seleccione un dibujo");
     } else{
-        window.location.replace("poll-finished.html");
-        localStorage.setItem("Bloqueado", id);
-        //console.log(id);
-        switch(check){
-            case "1":{
-                titulo_dibujo1++;
-                localStorage.setItem("Voto Dibujo 1", titulo_dibujo1);
-                //console.log(localStorage.getItem("Voto Dibujo 1"));
-                break;
-            }
-            case "2":{
-                titulo_dibujo2++;
-                localStorage.setItem("Voto Dibujo 2", titulo_dibujo2);
-                //console.log(localStorage.getItem("Voto Dibujo 2"));
-                break;
-            }
-        }
+        document.getElementById('Dibujos').addEventListener('submit', function(e){
+            e.preventDefault();
+            var dibujos=new FormData(document.getElementById('Dibujos'));
+        
+            fetch('guardado.php', {
+                method: 'POST',
+                body: dibujos
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data=="true"){
+                    alert("Los datos se guardaron correctamente");
+                    window.location.replace("poll-finished.html");
+                } else{
+                    console.log(data);
+                }
+            });
+        })
     }
 }
 function registro(block){
-    if(localStorage.getItem("Bloqueado").indexOf(block)!=-1){
-        window.location.replace("poll-error.html");
-    }
+    fetch('consulta.php')
+    .then(res=>res.json())
+    .then(data=>{
+        data.map(objeto=>{
+            if(objeto.codigo===block){
+                window.location.replace("poll-error.html");
+            }
+        })
+    });
 }
