@@ -15,7 +15,6 @@ function verificacion(){
             var dibujos=new FormData(document.getElementById('Dibujos'));
         
             fetch('guardado.php', {
-                method: 'POST',
                 body: dibujos
             })
             .then(res => res.json())
