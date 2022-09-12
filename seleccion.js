@@ -1,6 +1,6 @@
-/*localStorage.setItem("Voto Dibujo 1", 0);
+localStorage.setItem("Voto Dibujo 1", 0);
 localStorage.setItem("Voto Dibujo 2", 0);
-localStorage.setItem("Bloqueado", "0");*/
+localStorage.setItem("Bloqueado", "0");
 var titulo_dibujo1=localStorage.getItem("Voto Dibujo 1");
 var titulo_dibujo2=localStorage.getItem("Voto Dibujo 2");
 var id=localStorage.getItem("Bloqueado");
