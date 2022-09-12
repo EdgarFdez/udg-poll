@@ -8,12 +8,6 @@ p{
 footer{
     text-align: center;
 }
-button{
-    padding: 6px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 input[type="radio"]{
     cursor: pointer;
 }
