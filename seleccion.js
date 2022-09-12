@@ -34,10 +34,8 @@ function registro(block){
     fetch('consulta.php',{method:'POST'})
     .then(res=>res.json())
     .then(data=>{
-        data.map(objeto=>{
-            if(objeto.codigo===block){
-                window.location.replace("poll-error.html");
-            }
-        })
+        if(objeto.codigo===block){
+            window.location.replace("poll-error.html");
+        }
     });
 }
