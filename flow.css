@@ -17,6 +17,16 @@ button{
 input[type="radio"]{
     cursor: pointer;
 }
+table{
+    position: relative;
+    left: 5px;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 5px;
+    border-style: solid;
+    border-color: gray;
+}
 .posicion{
     font-size: 75px;
     position: relative;
