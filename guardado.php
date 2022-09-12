@@ -7,8 +7,6 @@ try{
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     
-    echo json_encode('Conectado correctamente');
-    
     $pdo=$conexion->prepare('INSERT INTO encuesta(Codigo, Dibujo) VALUES(?,?)');
     $pdo->bindParam(1,$codigo);
     $pdo->bindParam(2,$dibujo);
