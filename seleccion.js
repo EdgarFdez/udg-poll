@@ -31,7 +31,7 @@ function verificacion(){
     }
 }
 function registro(block){
-    fetch('consulta.php')
+    fetch('consulta.php',{method:'POST'})
     .then(res=>res.json())
     .then(data=>{
         data.map(objeto=>{
